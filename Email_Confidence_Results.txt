@@ -1,0 +1,135 @@
+EMAIL CONFIDENCE SCORE EVALUATION RESULTS
+==================================================
+
+DATASET SUMMARY
+--------------------
+Total samples: 500
+Number of classes: 5
+Classes: Spam, Promotions, Social, Updates, Forums
+
+Class Distribution:
+  Spam: 89 (17.8%)
+  Promotions: 118 (23.6%)
+  Social: 86 (17.2%)
+  Updates: 152 (30.4%)
+  Forums: 55 (11.0%)
+
+Overall Accuracy: 0.500
+
+RAW MODEL METRICS
+--------------------
+ACCURACY: 0.5000
+NLL: 1.4334
+BRIER: 0.6901
+ECE: 0.1999
+MCE: 0.3302
+CONFIDENCE_AUROC: 0.6729
+PEARSON_CORR: 0.2964
+SPEARMAN_CORR: 0.2994
+KENDALL_CORR: 0.2447
+
+CALIBRATED MODEL METRICS (Temperature Scaling)
+--------------------------------------------------
+ACCURACY: 0.5000
+NLL: 1.2288
+BRIER: 0.6272
+ECE: 0.0341
+MCE: 0.0931
+CONFIDENCE_AUROC: 0.6838
+PEARSON_CORR: 0.3391
+SPEARMAN_CORR: 0.3183
+KENDALL_CORR: 0.2602
+
+CONFIDENCE SCORE ANALYSIS
+------------------------------
+MSP:
+  Mean: 0.6999
+  Std: 0.1954
+  Min: 0.2622
+  Max: 0.9987
+
+ENTROPY:
+  Mean: -0.7748
+  Std: 0.3858
+  Min: -1.5373
+  Max: -0.0112
+
+ENTROPY_NORMALIZED:
+  Mean: -0.4814
+  Std: 0.2397
+  Min: -0.9552
+  Max: -0.0070
+
+MARGIN:
+  Mean: 0.5146
+  Std: 0.3093
+  Min: 0.0006
+  Max: 0.9982
+
+ENERGY:
+  Mean: -3.3141
+  Std: 1.4608
+  Min: -8.1447
+  Max: 0.5142
+
+LOGIT_VARIANCE:
+  Mean: -4.2790
+  Std: 3.0445
+  Min: -22.6058
+  Max: -0.1876
+
+CORRELATION ANALYSIS
+-------------------------
+Confidence vs Correctness correlations:
+  Pearson: 0.2964
+  Spearman: 0.2994
+  Kendall: 0.2447
+
+PER-CLASS PERFORMANCE
+-------------------------
+Spam:
+  Predictions: 57
+  Accuracy: 0.439
+  Avg Confidence: 0.633
+
+Promotions:
+  Predictions: 57
+  Accuracy: 0.649
+  Avg Confidence: 0.681
+
+Social:
+  Predictions: 140
+  Accuracy: 0.429
+  Avg Confidence: 0.692
+
+Updates:
+  Predictions: 126
+  Accuracy: 0.675
+  Avg Confidence: 0.735
+
+Forums:
+  Predictions: 120
+  Accuracy: 0.358
+  Avg Confidence: 0.713
+
+CALIBRATION IMPROVEMENT SUMMARY
+-----------------------------------
+ECE Improvement: 82.9%
+NLL Improvement: 14.3%
+
+VISUALIZATION FILES GENERATED
+------------------------------
+ 1. reliability_overall.png
+ 2. reliability_per_class.png
+ 3. reliability_adaptive.png
+ 4. boxplot_agreement.png
+ 5. heatmap_confidence_correctness.png
+ 6. confidence_histogram.png
+ 7. violin_per_class.png
+ 8. confidence_error_curve.png
+ 9. temperature_sweep.png
+10. risk_coverage_curve.png
+11. roc_overlay.png
+12. pr_overlay.png
+13. cumulative_gain.png
+14. lift_chart.png
